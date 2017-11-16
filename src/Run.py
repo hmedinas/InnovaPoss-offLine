@@ -5,12 +5,16 @@ import subprocess
 import os
 import re
 import datetime
+
+
+#sys.path.append('C:\\Dimatica\\offLine')
+
 from src.layers.MessageMachine import MessageJson
 from src.layers.MessageMachine import ErrorProcess
 from src.layers.MessageMachine import SussesProcess
 from src.layers.MessageMachine import WorkerStates
 from src.layers.MessageMachine import Variables
-
+from src.layers.RabbitMQ import Mensage
 from src.layers.TCPClient import TCPDataAdapter
 from flask import  Flask,jsonify,abort,make_response,request
 app = Flask(__name__)
@@ -179,6 +183,8 @@ def ApiDispacher():
                             msgNew = MessageJsonDispacher(_carril, _User="", _Camp="")
                             _Variables.importeIngresado=0
                             #TODO: Mensaje a la Rabbit local
+                            oMensaje=Mensage()
+                            oMensaje.SendMessage(msgNew)
                             #oQueueDestroid.newMessageServer(msgNew, props=None, queue_name=NameQueueServer())
 
                         else:
@@ -239,10 +245,6 @@ def CCM_Write(_Carril: str) -> bool:
         return True
     else:
         return False
-
-
-
-
 
 
 

@@ -4,6 +4,7 @@ import uuid
 from _thread import start_new_thread
 from time import sleep
 from typing import Callable, Any
+from src.layers.MessageMachine import Constantes
 
 
 class TCPDataAdapter():
@@ -26,9 +27,9 @@ class TCPDataAdapter():
         :return: None
         :rtype: None
         """
-        print("Opening connection")
+        print(f'Opening connection port {Constantes.port3000}')
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.sock.connect(("localhost", 3000))
+        self.sock.connect((Constantes.Host, Constantes.port3000))
         self.sock.settimeout(1)
         print("Connection opened")
         self._is_opened_ = True
@@ -41,9 +42,9 @@ class TCPDataAdapter():
             :return: None
             :rtype: None
             """
-            print("Binding port 3001")
+            print(f'Binding port {Constantes.port3001}')
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.sock.bind(("localhost", 3001))
+            self.sock.bind((Constantes.Host, Constantes.port3001))
             self.sock.settimeout(1)
             print("Port binding done")
             self.sock.listen()
