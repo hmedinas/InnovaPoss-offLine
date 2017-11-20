@@ -122,6 +122,7 @@ def ApiStart():
             return
         print('solicitando Stock full')
         _CarrilesFormat: str = str(GetStockStar())
+        print(f'Carriles:{_CarrilesFormat}')
         if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT):
             _Result.Status = 'KO'
             _Result.Mensaje = ErrorProcess.CCM_OUT_PRODUC
@@ -141,6 +142,7 @@ def ApiStart():
 
         _Result.Phone=''
         _Result.Status='KO'
+        print(e)
         _Result.Mensaje=ErrorProcess.DESCONOCIDO# 'ERR-1000: Error no controlado. '
 
     finally:
@@ -153,6 +155,12 @@ def ApiPrepare():
     _Result = MessageJson()
     _Result.Accion = "PREPARE"
     try:
+        if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT):
+            _Result.Status = 'KO'
+            _Result.Mensaje = ErrorProcess.CCM_OUT_PRODUC
+            msg = messageJsonOutput(_Result, None)
+            return msg
+
         _carril:str= request.args.get('Carril')
         print(f'Carril: {_carril}')
         if(CCM_Getstatus()==True):
@@ -218,6 +226,7 @@ def ApiDispacher():
     except Exception as e:
         _Result.Phone = ''
         _Result.Status = 'KO'
+        print(e)
         _Result.Mensaje = ErrorProcess.DESCONOCIDO  # 'ERR-1000: Error no controlado.
     finally:
         print("Enviando Mensaje server")
