@@ -7,6 +7,9 @@ import re
 import datetime
 from src.Common.Settings import LogProceso
 
+
+
+
 #sys.path.append('C:\\Dimatica\\offLine')
 
 from src.layers.MessageMachine import MessageJson

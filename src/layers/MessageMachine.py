@@ -2,8 +2,8 @@ from enum import Enum
 import datetime
 
 class Constantes():
-    port3000:int=3000
-    port3001:int=3001
+    port3000:int=4000
+    port3001:int=4001
     Host:str='localhost'
     RabbitAMQP:str='amqp://guest:guest@innova.vservers.es:5672'
     QueueServer:str='OUT_ServerREAD'
