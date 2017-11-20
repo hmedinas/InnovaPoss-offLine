@@ -103,7 +103,7 @@ class TCPDataAdapter():
         while self._is_opened_:
             try:
                 conn, address = self.sock.accept()
-                print(f"Accepted a new connection on. Starting handler thread")
+                print(f"La nueva conexion se ha establecido. Iniciando el manejador del thread")
                 start_new_thread(self.handle_client_messages_loop, (conn, address))
             except  Exception:
                 pass

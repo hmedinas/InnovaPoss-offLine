@@ -8,6 +8,7 @@ class Constantes():
     RabbitAMQP:str='amqp://guest:guest@innova.vservers.es:5672'
     QueueServer:str='OUT_ServerREAD'
 
+
 class WorkerStates(Enum):
     NONE = "NONE"  # --si
     DEBUGGING = "DEBUGGING"

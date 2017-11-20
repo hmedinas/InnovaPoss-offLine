@@ -5,7 +5,7 @@ import subprocess
 import os
 import re
 import datetime
-
+from src.Common.Settings import LogProceso
 
 #sys.path.append('C:\\Dimatica\\offLine')
 
@@ -18,6 +18,7 @@ from src.layers.RabbitMQ import Mensage
 from src.layers.TCPClient import TCPDataAdapter
 from flask import  Flask,jsonify,abort,make_response,request
 app = Flask(__name__)
+import logging
 #region Variables generales
 
 
@@ -38,6 +39,13 @@ def monedero_callback(message):
         print(f'Mensaje Machine: {message}')
         print('**************************************')
         return 'Status: APP'
+
+    if ((_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT or _Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT_LOCAL) and 'CCM_Producto_OUT' in message):
+        print('Valida CCM_Producto_OUT Y WAIT_PRODUCT_OUT_LOCAL')
+        WorkerStates.WAIT_PRODUCT_OUT
+        _Variables.importeIngresado=0
+
+        return 'OK'
 
 def messageJsonOutput(Mensaje: MessageJson, MultiDat: str = None):
     return messageJsonOutput_Encoding(Mensaje.Accion, Mensaje.Phone, Mensaje.Success, Mensaje.Status,
@@ -108,7 +116,10 @@ def ApiStart():
     _Result.Accion = "START"
 
     try:
-
+        if (CCM_Getstatus() == False):
+            _Result.Status = "KO"
+            _Result.Mensaje = ErrorProcess.CCM_STATUS
+            return
         print('solicitando Stock full')
         _CarrilesFormat: str = str(GetStockStar())
         if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT):
@@ -139,18 +150,17 @@ def ApiStart():
 
 @app.route('/api/Prepare',methods=['GET'])
 def ApiPrepare():
+    _Result = MessageJson()
+    _Result.Accion = "PREPARE"
     try:
         _carril:str= request.args.get('Carril')
         print(f'Carril: {_carril}')
-        _Result = MessageJson()
-
         if(CCM_Getstatus()==True):
+            Devolucion()
             _Variables.importeIngresado = 0
-            _Result.Accion = "PREPARE"
             _Result.Status = "OK"
             _Result.Mensaje = SussesProcess.PREPARE
         else:
-            _Result.Accion="PREPARE"
             _Result.Status="KO"
             _Result.Mensaje=ErrorProcess.CCM_STATUS
     except Exception as e:
@@ -175,8 +185,9 @@ def ApiDispacher():
         if (_Variables.current_state==WorkerStates.LOCAL):
             if(_Variables.importeIngresado>= _precio):
                 if(CCM_Getstatus()==True):
+                    time.sleep(0.25)
                     if(CCM_Select(_carril)==True):
-
+                        time.sleep(0.25)
                         if(CCM_Write(_carril)==True):
                             _Variables.current_state=WorkerStates.WAIT_PRODUCT_OUT
                             _Result.Mensaje = SussesProcess.CCM_WRITE
@@ -230,13 +241,6 @@ def CCM_Select(_Carril:str)->bool:
     else:
         return False
 
-def CCM_Write(_Carril:str)->bool:
-    _Result = ccm_adapter.transact_message('CCM_Select('+_Carril+')')
-    print(f"Respuesta Select: {_Result}")
-    if 'OK' in _Result:
-        return True
-    else:
-        return False
 
 def CCM_Write(_Carril: str) -> bool:
     _Result = ccm_adapter.transact_message('CCM_Write(' + _Carril + ')')
@@ -246,10 +250,25 @@ def CCM_Write(_Carril: str) -> bool:
     else:
         return False
 
+def Devolucion() -> bool:
+    reply1 = ccm_adapter.transact_message_to_ccm("CCM_Devolucion")
+    if 'OK' in reply1 or 'CCM_Devolucion' in reply1:
+        return True
+    else:
+        return False
+
 
 
 if __name__=='__main__':
-    _Variables =  Variables();
+
+    print(f'{os.getcwd()}')
+    config_path = r"C:\Users\Usuario\Documents\Source\InnovaOffLine\Config\Configuracion.config"
+    oLog=LogProceso()
+    oLog.StartLogging(config_path)
+
+
+    logging.info("Mensaje")
+    _Variables =  Variables()
     _Variables.current_state=WorkerStates.APP
     ccm_adapter = TCPDataAdapter()
     ccm_adapter.open()
