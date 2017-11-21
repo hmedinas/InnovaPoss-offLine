@@ -123,38 +123,36 @@ def ApiStart():
     _Result.Accion = "START"
 
     try:
-        print(f'Dimatica >>> 1 *******************')
+        print(f'Dimatica >>> verificando status')
+        logging.info("Verificando status");
         if (CCM_Getstatus() == False):
             _Result.Status = "KO"
             _Result.Mensaje = ErrorProcess.CCM_STATUS
             return
+        logging.info("Verificando status OK");
+        print(f'Dimatica >>> 2 *******************')
         print('Dimatica >>> solicitando Stock full')
         _CarrilesFormat: str = str(GetStockStar())
         print(f'Dimatica >>> Carriles:{_CarrilesFormat}')
-        print(f'Dimatica >>> 2 *******************')
+        print(f'Dimatica >>> 3 *******************')
+
         if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT):
             _Result.Status = 'KO'
             _Result.Mensaje = ErrorProcess.CCM_OUT_PRODUC
             msg = messageJsonOutput(_Result, None)
             return msg
-        print(f'Dimatica >>> 3 *******************')
 
         _Result.Status = 'OK'
         _Result.Phone = ''
-        print(f'Dimatica >>> 4 *******************')
         #_Result.Mensaje = SussesProcess.START  # 'Communicacion Aceptada'
         _Result.Mensaje = _CarrilesFormat
         _Result.TimeBloq = str("2000")
-        print(f'Dimatica >>> 5 *******************')
         _Variables.current_state=WorkerStates.LOCAL
-        print('Dimatica >>> Stock full con exito')
     except Exception as e:
-
         _Result.Phone=''
         _Result.Status='KO'
         print(f'Dimatica >>>{e}')
         _Result.Mensaje=ErrorProcess.DESCONOCIDO# 'ERR-1000: Error no controlado. '
-
     finally:
         print("Dimatica >>>Enviando Mensaje server")
         msg= messageJsonOutput(_Result,None)
