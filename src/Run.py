@@ -124,17 +124,15 @@ def ApiStart():
 
     try:
         print(f'Dimatica >>> verificando status')
-        logging.info("Verificando status");
         if (CCM_Getstatus() == False):
             _Result.Status = "KO"
             _Result.Mensaje = ErrorProcess.CCM_STATUS
             return
-        logging.info("Verificando status OK");
-        print(f'Dimatica >>> 2 *******************')
+        print(f'Dimatica >>> 2 *********************************************************')
         print('Dimatica >>> solicitando Stock full')
         _CarrilesFormat: str = str(GetStockStar())
         print(f'Dimatica >>> Carriles:{_CarrilesFormat}')
-        print(f'Dimatica >>> 3 *******************')
+        print(f'Dimatica >>> 3 *************************************************')
 
         if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT):
             _Result.Status = 'KO'
@@ -268,7 +266,7 @@ def CCM_Write(_Carril: str) -> bool:
         return False
 
 def Devolucion() -> bool:
-    reply1 = ccm_adapter.transact_message_to_ccm("CCM_Devolucion")
+    reply1 = ccm_adapter.transact_message("CCM_Devolucion")
     print(f'Dimatica devolucion >>>{reply1}')
     if 'OK' in reply1 or 'CCM_Devolucion' in reply1:
         return True

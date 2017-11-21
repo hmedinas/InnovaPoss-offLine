@@ -92,7 +92,7 @@ class TCPDataAdapter():
         :return: received answer
         :rtype: str
         """
-        print(f"Transacting message {message}")
+        print(f"Procesando mensaje >>>>>>>>>>>>  {message}")
         self.send_message(message)
         sleep(2)
         reply = self.receive_message_with_stop_byte()
