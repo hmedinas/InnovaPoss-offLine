@@ -20,7 +20,11 @@ from src.layers.MessageMachine import Variables
 from src.layers.RabbitMQ import Mensage
 from src.layers.TCPClient import TCPDataAdapter
 from flask import  Flask,jsonify,abort,make_response,request
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
+
 import logging
 #region Variables generales
 
@@ -290,6 +294,6 @@ if __name__=='__main__':
 
     port = int(os.environ.get('PORT', 5000))
 
-    app.run(port=port)
+    app.run(host='127.0.0.1', port=port)
     #app.run(debug=False)
 
