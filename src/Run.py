@@ -5,7 +5,7 @@ import subprocess
 import os
 import re
 import datetime
-from src.Common.Settings import LogProceso
+#from src.Common.Settings import LogProceso
 
 
 
