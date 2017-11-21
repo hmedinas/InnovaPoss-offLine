@@ -4,7 +4,7 @@ import datetime
 class Constantes():
     port3000:int=3000
     port3001:int=3001
-    Host:str='localhost'
+    Host:str='127.0.0.1'
     RabbitAMQP:str='amqp://guest:guest@innova.vservers.es:5672'
     QueueServer:str='OUT_ServerREAD'
 

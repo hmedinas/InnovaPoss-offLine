@@ -279,11 +279,10 @@ def Devolucion() -> bool:
 
 if __name__=='__main__':
 
-    print(f' Dimatica >>> {os.getcwd()}')
-    config_path = r"C:\Dimatica\offLine\Config\Configuracion.config"
-    oLog=LogProceso()
-    oLog.StartLogging(config_path)
-
+    #print(f' Dimatica >>> {os.getcwd()}')
+    #config_path = r"C:\Dimatica\offLine\Config\Configuracion.config"
+    #oLog=LogProceso()
+    #oLog.StartLogging(config_path)
 
     logging.info("Dimatica >>> Mensaje")
     _Variables =  Variables()

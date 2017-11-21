@@ -3,18 +3,20 @@ import logging
 import logging.handlers
 import os
 from pathlib import Path
+from src.layers.MessageMachine import Constantes
 
 class Settings():
     def __init__(self):
+
         self.logging_logger_name: str = None
         self.logging_level: int = None
         self.logging_filename: str = None
         self.logging_format: str = None
-        self.port3000: int = 3000
-        self.port3001: int = 3001
-        self.Host: str = 'localhost'
-        self.RabbitAMQP: str = 'amqp://guest:guest@innova.vservers.es:5672'
-        self.QueueServer: str = 'OUT_ServerREAD'
+        self.port3000: int = Constantes.port3000
+        self.port3001: int = Constantes.port3001
+        self.Host: str = Constantes.Host
+        self.RabbitAMQP: str = Constantes.RabbitAMQP# 'amqp://guest:guest@innova.vservers.es:5672'
+        self.QueueServer: str = Constantes.QueueServer
 
     @staticmethod
     def StartConfiguration(path:str):
@@ -38,7 +40,7 @@ class Settings():
             oResult.logging_format = Util.get_with_default(oConfiguracion, "logging", "format","%%(asctime)s %%(name)s %%(levelname)s %%(message)s")
 
             return oResult
-
+'''
 class LogProceso():
     def __init__(self):
         self.Settting:Settings=None
@@ -65,3 +67,5 @@ class LogProceso():
         self.logger.addHandler(log_file_handler)
         self.logger.info(" = = = = = = Inicio de Log OffLine = = = = = = ")
         self.logger.debug("Configuracion de level")
+        
+'''
