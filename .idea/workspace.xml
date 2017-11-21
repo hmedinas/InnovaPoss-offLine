@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e2d864f2-d0ea-40c2-9049-14a8e8eb4fff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Common/Settings.py" afterPath="$PROJECT_DIR$/src/Common/Settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Run.py" afterPath="$PROJECT_DIR$/src/Run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +18,8 @@
       <file leaf-file-name="Run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="270" column="31" lean-forward="false" selection-start-line="270" selection-start-column="31" selection-end-line="270" selection-end-column="31" />
+            <state relative-caret-position="109">
+              <caret line="147" column="30" lean-forward="false" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#758#1812#0" expanded="false" />
@@ -28,7 +27,7 @@
                 <element signature="e#3317#3629#0" expanded="false" />
                 <element signature="e#3699#3730#0" expanded="false" />
                 <element signature="e#3798#4071#0" expanded="false" />
-                <element signature="e#6570#8612#0" expanded="false" />
+                <element signature="e#6833#8875#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -495,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511263937354</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="nuevos cambios">
+      <created>1511264299539</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511264299539</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -510,7 +516,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25425038" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44755244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44755244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -559,23 +565,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Run.py</url>
-          <line>235</line>
+          <line>238</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Run.py</url>
-          <line>233</line>
+          <line>236</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Run.py</url>
-          <line>149</line>
+          <line>152</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Run.py</url>
-          <line>121</line>
-          <option name="timeStamp" value="61" />
+          <line>120</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -585,7 +591,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="62" />
+      <option name="time" value="64" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -658,7 +664,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
-            <element signature="e#6570#8612#0" expanded="false" />
+            <element signature="e#6833#8875#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -729,7 +735,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
-            <element signature="e#6570#8612#0" expanded="false" />
+            <element signature="e#6833#8875#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -783,7 +789,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
-            <element signature="e#6570#8612#0" expanded="false" />
+            <element signature="e#6833#8875#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -837,7 +843,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
-            <element signature="e#6570#8612#0" expanded="false" />
+            <element signature="e#6833#8875#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -891,7 +897,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
-            <element signature="e#6570#8612#0" expanded="false" />
+            <element signature="e#6833#8875#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1051,8 +1057,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="270" column="31" lean-forward="false" selection-start-line="270" selection-start-column="31" selection-end-line="270" selection-end-column="31" />
+        <state relative-caret-position="109">
+          <caret line="147" column="30" lean-forward="false" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#758#1812#0" expanded="false" />
@@ -1060,7 +1066,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
-            <element signature="e#6570#8612#0" expanded="false" />
+            <element signature="e#6833#8875#0" expanded="false" />
           </folding>
         </state>
       </provider>
