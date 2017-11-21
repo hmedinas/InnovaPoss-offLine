@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2d864f2-d0ea-40c2-9049-14a8e8eb4fff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Common/Settings.py" afterPath="$PROJECT_DIR$/src/Common/Settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Run.py" afterPath="$PROJECT_DIR$/src/Run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file leaf-file-name="Run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="282" column="4" lean-forward="false" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
+            <state relative-caret-position="338">
+              <caret line="270" column="31" lean-forward="false" selection-start-line="270" selection-start-column="31" selection-end-line="270" selection-end-column="31" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#758#1812#0" expanded="false" />
@@ -27,6 +28,7 @@
                 <element signature="e#3317#3629#0" expanded="false" />
                 <element signature="e#3699#3730#0" expanded="false" />
                 <element signature="e#3798#4071#0" expanded="false" />
+                <element signature="e#6570#8612#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -45,8 +47,8 @@
       <file leaf-file-name="Configuracion.config" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Config/Configuracion.config">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state relative-caret-position="108">
+              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -65,8 +67,8 @@
       <file leaf-file-name="Settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Common/Settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -181,8 +183,8 @@
         <option value="$PROJECT_DIR$/src/layers/Configuraciones.py" />
         <option value="$PROJECT_DIR$/src/Common/Util.py" />
         <option value="$PROJECT_DIR$/Config/Configuracion.config" />
-        <option value="$PROJECT_DIR$/src/Common/Settings.py" />
         <option value="$PROJECT_DIR$/src/layers/MessageMachine.py" />
+        <option value="$PROJECT_DIR$/src/Common/Settings.py" />
         <option value="$PROJECT_DIR$/src/Run.py" />
       </list>
     </option>
@@ -486,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511263747345</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="nuevos cambios">
+      <created>1511263937354</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511263937354</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -649,6 +658,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
+            <element signature="e#6570#8612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -719,6 +729,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
+            <element signature="e#6570#8612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -772,6 +783,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
+            <element signature="e#6570#8612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -825,6 +837,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
+            <element signature="e#6570#8612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -878,6 +891,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
+            <element signature="e#6570#8612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -961,14 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Config/Configuracion.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/configparser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15750">
@@ -1001,16 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28296">
@@ -1035,10 +1031,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Run.py">
+    <entry file="file://$PROJECT_DIR$/Config/Configuracion.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="282" column="4" lean-forward="false" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="4" />
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="270" column="31" lean-forward="false" selection-start-line="270" selection-start-column="31" selection-end-line="270" selection-end-column="31" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#758#1812#0" expanded="false" />
@@ -1046,6 +1060,7 @@
             <element signature="e#3317#3629#0" expanded="false" />
             <element signature="e#3699#3730#0" expanded="false" />
             <element signature="e#3798#4071#0" expanded="false" />
+            <element signature="e#6570#8612#0" expanded="false" />
           </folding>
         </state>
       </provider>

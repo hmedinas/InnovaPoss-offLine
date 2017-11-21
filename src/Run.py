@@ -118,7 +118,7 @@ def getstatus():
 
 @app.route('/api/Start',methods=['GET'])
 def ApiStart():
-    print('Iniando start')
+    print('Dimatica >>> Iniando start')
     _Result =MessageJson()
     _Result.Accion = "START"
 
@@ -127,9 +127,9 @@ def ApiStart():
             _Result.Status = "KO"
             _Result.Mensaje = ErrorProcess.CCM_STATUS
             return
-        print('solicitando Stock full')
+        print('Dimatica >>> solicitando Stock full')
         _CarrilesFormat: str = str(GetStockStar())
-        print(f'Carriles:{_CarrilesFormat}')
+        print(f'Dimatica >>> Carriles:{_CarrilesFormat}')
         if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT):
             _Result.Status = 'KO'
             _Result.Mensaje = ErrorProcess.CCM_OUT_PRODUC
@@ -144,16 +144,16 @@ def ApiStart():
         _Result.Mensaje = _CarrilesFormat
         _Result.TimeBloq = str("2000")
         _Variables.current_state=WorkerStates.LOCAL
-        print('Stock full con exito')
+        print('Dimatica >>> Stock full con exito')
     except Exception as e:
 
         _Result.Phone=''
         _Result.Status='KO'
-        print(e)
+        print(f'Dimatica >>>{e}')
         _Result.Mensaje=ErrorProcess.DESCONOCIDO# 'ERR-1000: Error no controlado. '
 
     finally:
-        print("Enviando Mensaje server")
+        print("Dimatica >>>Enviando Mensaje server")
         msg= messageJsonOutput(_Result,None)
         return msg
 
@@ -169,7 +169,7 @@ def ApiPrepare():
             return msg
 
         _carril:str= request.args.get('Carril')
-        print(f'Carril: {_carril}')
+        print(f'Dimatica >>>Carril: {_carril}')
         if(CCM_Getstatus()==True):
             Devolucion()
             _Variables.importeIngresado = 0
@@ -183,7 +183,7 @@ def ApiPrepare():
         _Result.Status = 'KO'
         _Result.Mensaje = ErrorProcess.DESCONOCIDO  # 'ERR-1000: Error no controlado.
     finally:
-        print("Enviando Mensaje server")
+        print("Dimatica >>>Enviando Mensaje server")
         msg = messageJsonOutput(_Result, None)
         return msg
         #  '
@@ -242,7 +242,7 @@ def ApiDispacher():
 
 def CCM_Getstatus()-> bool:
     _Result = ccm_adapter.transact_message('CCM_Getstatus')
-    print(f"Respuesta Status: {_Result}")
+    print(f"Dimatica >>> Respuesta Status: {_Result}")
 
     if 'OK' in _Result:
         return True
@@ -251,7 +251,7 @@ def CCM_Getstatus()-> bool:
 
 def CCM_Select(_Carril:str)->bool:
     _Result = ccm_adapter.transact_message('CCM_Select('+_Carril+')')
-    print(f"Respuesta Select: {_Result}")
+    print(f"Dimatica >>> Respuesta Select: {_Result}")
     if 'OK' in _Result:
         return True
     else:
@@ -268,6 +268,7 @@ def CCM_Write(_Carril: str) -> bool:
 
 def Devolucion() -> bool:
     reply1 = ccm_adapter.transact_message_to_ccm("CCM_Devolucion")
+    print(f'Dimatica devolucion >>>{reply1}')
     if 'OK' in reply1 or 'CCM_Devolucion' in reply1:
         return True
     else:
@@ -277,13 +278,13 @@ def Devolucion() -> bool:
 
 if __name__=='__main__':
 
-    print(f'{os.getcwd()}')
+    print(f' Dimatica >>> {os.getcwd()}')
     config_path = r"C:\Dimatica\offLine\Config\Configuracion.config"
     oLog=LogProceso()
     oLog.StartLogging(config_path)
 
 
-    logging.info("Mensaje")
+    logging.info("Dimatica >>> Mensaje")
     _Variables =  Variables()
     _Variables.current_state=WorkerStates.APP
     ccm_adapter = TCPDataAdapter()

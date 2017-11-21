@@ -45,7 +45,7 @@ class LogProceso():
     def StartLogging(self,path:str):
         self.Settting=Settings.StartConfiguration(path)
         self.logger=logging.getLogger(self.Settting.logging_filename)
-        print(f'Level: {self.Settting.logging_level}')
+        print(f'Dimatica >>> Level: {self.Settting.logging_level}')
         self.logger.setLevel(self.Settting.logging_level)
 
         log_stream_handler = logging.StreamHandler()
