@@ -18,8 +18,8 @@
       <file leaf-file-name="Run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="187" column="8" lean-forward="false" selection-start-line="187" selection-start-column="8" selection-end-line="187" selection-end-column="8" />
+            <state relative-caret-position="213">
+              <caret line="222" column="60" lean-forward="true" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#759#1813#0" expanded="false" />
@@ -27,8 +27,7 @@
                 <element signature="e#3318#3630#0" expanded="false" />
                 <element signature="e#3700#3731#0" expanded="false" />
                 <element signature="e#3799#4072#0" expanded="false" />
-                <element signature="e#7616#8814#0" expanded="false" />
-                <element signature="e#9592#9787#0" expanded="false" />
+                <element signature="e#9633#9828#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -116,6 +115,7 @@
       <find>full</find>
       <find>Transacting message</find>
       <find>PROCESS</find>
+      <find>.APP</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -494,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511341539742</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="nuevos cambios">
+      <created>1511359558352</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511359558352</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -558,12 +565,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Run.py</url>
-          <line>246</line>
+          <line>247</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/Run.py</url>
-          <line>244</line>
+          <line>245</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -647,8 +654,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#7616#8814#0" expanded="false" />
-            <element signature="e#9592#9787#0" expanded="false" />
+            <element signature="e#9633#9828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -717,8 +723,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#7616#8814#0" expanded="false" />
-            <element signature="e#9592#9787#0" expanded="false" />
+            <element signature="e#9633#9828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -770,8 +775,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#7616#8814#0" expanded="false" />
-            <element signature="e#9592#9787#0" expanded="false" />
+            <element signature="e#9633#9828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -823,8 +827,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#7616#8814#0" expanded="false" />
-            <element signature="e#9592#9787#0" expanded="false" />
+            <element signature="e#9633#9828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -876,8 +879,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#7616#8814#0" expanded="false" />
-            <element signature="e#9592#9787#0" expanded="false" />
+            <element signature="e#9633#9828#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1028,8 +1030,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="187" column="8" lean-forward="false" selection-start-line="187" selection-start-column="8" selection-end-line="187" selection-end-column="8" />
+        <state relative-caret-position="213">
+          <caret line="222" column="60" lean-forward="true" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#759#1813#0" expanded="false" />
@@ -1037,8 +1039,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#7616#8814#0" expanded="false" />
-            <element signature="e#9592#9787#0" expanded="false" />
+            <element signature="e#9633#9828#0" expanded="false" />
           </folding>
         </state>
       </provider>
