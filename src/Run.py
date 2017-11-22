@@ -217,7 +217,7 @@ def ApiDispacher():
                         if(CCM_Write(_carril)==True):
                             _Variables.current_state=WorkerStates.WAIT_PRODUCT_OUT
                             _Result.Mensaje = SussesProcess.CCM_WRITE
-                            _Result.Mensaje="OK"
+                            _Result.Status="OK"
                             msgNew = MessageJsonDispacher(_carril, _User="", _Camp="")
                             _Variables.importeIngresado=0
                             #TODO: Mensaje a la Rabbit local

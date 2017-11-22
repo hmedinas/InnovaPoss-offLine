@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e2d864f2-d0ea-40c2-9049-14a8e8eb4fff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Run.py" afterPath="$PROJECT_DIR$/src/Run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="Run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="222" column="60" lean-forward="true" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
+            <state relative-caret-position="159">
+              <caret line="219" column="42" lean-forward="false" selection-start-line="219" selection-start-column="42" selection-end-line="219" selection-end-column="42" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#759#1813#0" expanded="false" />
@@ -26,7 +27,7 @@
                 <element signature="e#3318#3630#0" expanded="false" />
                 <element signature="e#3700#3731#0" expanded="false" />
                 <element signature="e#3799#4072#0" expanded="false" />
-                <element signature="e#9633#9828#0" expanded="false" />
+                <element signature="e#9632#9827#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -507,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511360434703</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="nuevos cambios">
+      <created>1511360625314</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1511360625314</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -660,7 +668,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#9633#9828#0" expanded="false" />
+            <element signature="e#9632#9827#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -729,7 +737,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#9633#9828#0" expanded="false" />
+            <element signature="e#9632#9827#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,7 +789,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#9633#9828#0" expanded="false" />
+            <element signature="e#9632#9827#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -833,7 +841,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#9633#9828#0" expanded="false" />
+            <element signature="e#9632#9827#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -885,7 +893,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#9633#9828#0" expanded="false" />
+            <element signature="e#9632#9827#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1036,8 +1044,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="222" column="60" lean-forward="true" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
+        <state relative-caret-position="159">
+          <caret line="219" column="42" lean-forward="false" selection-start-line="219" selection-start-column="42" selection-end-line="219" selection-end-column="42" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#759#1813#0" expanded="false" />
@@ -1045,7 +1053,7 @@
             <element signature="e#3318#3630#0" expanded="false" />
             <element signature="e#3700#3731#0" expanded="false" />
             <element signature="e#3799#4072#0" expanded="false" />
-            <element signature="e#9633#9828#0" expanded="false" />
+            <element signature="e#9632#9827#0" expanded="false" />
           </folding>
         </state>
       </provider>
