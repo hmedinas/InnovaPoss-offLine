@@ -146,6 +146,9 @@ def ApiStart():
         _Result.Mensaje = _CarrilesFormat
         _Result.TimeBloq = str("2000")
         _Variables.current_state=WorkerStates.LOCAL
+        print('********************************************')
+        print(f'Estado Machine{_Variables.current_state}')
+        print('********************************************')
     except Exception as e:
         _Result.Phone=''
         _Result.Status='KO'
@@ -168,6 +171,7 @@ def ApiPrepare():
             return msg
 
         _carril:str= request.args.get('Carril')
+
         print(f'Dimatica >>>Carril: {_carril}')
         if(CCM_Getstatus()==True):
             Devolucion()
@@ -177,6 +181,11 @@ def ApiPrepare():
         else:
             _Result.Status="KO"
             _Result.Mensaje=ErrorProcess.CCM_STATUS
+
+        print('********************************************')
+        print(f'Estado Machine{_Variables.current_state}')
+        print('********************************************')
+        
     except Exception as e:
         _Result.Phone = ''
         _Result.Status = 'KO'
@@ -190,6 +199,9 @@ def ApiPrepare():
 
 @app.route('/api/Dispacher',methods=['GET'])
 def ApiDispacher():
+    print('********************************************')
+    print(f'Estado Machine{_Variables.current_state}')
+    print('********************************************')
     _Result = MessageJson()
     _Result.Accion = "DISPACHER"
     _Result.TimeBloq = 0
