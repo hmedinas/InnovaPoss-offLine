@@ -175,9 +175,13 @@ def ApiPrepare():
         print(f'Dimatica >>>Carril: {_carril}')
         if(CCM_Getstatus()==True):
             Devolucion()
-            _Variables.importeIngresado = 0
-            _Result.Status = "OK"
-            _Result.Mensaje = SussesProcess.PREPARE
+            if (CCM_Select(_carril) == True):
+                _Variables.importeIngresado = 0
+                _Result.Status = "OK"
+                _Result.Mensaje = SussesProcess.PREPARE
+            else:
+                _Result.Status = "KO"
+                _Result.Mensaje = ErrorProcess.CCM_SELECT
         else:
             _Result.Status="KO"
             _Result.Mensaje=ErrorProcess.CCM_STATUS
