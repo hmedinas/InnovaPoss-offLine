@@ -49,7 +49,7 @@ def monedero_callback(message):
 
     if (_Variables.current_state == WorkerStates.WAIT_PRODUCT_OUT and 'CCM_Producto_OUT' in message):
         print('Valida CCM_Producto_OUT Y WAIT_PRODUCT_OUT_LOCAL')
-        WorkerStates.APP
+        _Variables.current_state=WorkerStates.APP
         _Variables.importeIngresado=0
 
         return 'OK'
