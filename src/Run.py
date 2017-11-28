@@ -256,6 +256,23 @@ def ApiDispacher():
         msg = messageJsonOutput(_Result, None)
         return msg
 
+@app.route('/api/Finish',methods=['GET'])
+def ApiFinish():
+    print('********************************************')
+    print(f'Estado Machine: {_Variables.current_state}')
+    print('********************************************')
+    try:
+        _Variables.current_state = WorkerStates.APP
+        _Variables.importeIngresado = 0
+        print('********************************************')
+        print(f' Cambiando estado.......')
+        print(f'Estado Machine: {_Variables.current_state}')
+        print('********************************************')
+        return "OK"
+    except Exception as e:
+        return "Error........ Finish"
+
+
 def CCM_Getstatus()-> bool:
     _Result = ccm_adapter.transact_message('CCM_Getstatus')
     print(f"Dimatica >>> Respuesta Status: {_Result}")
