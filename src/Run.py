@@ -130,8 +130,8 @@ def ApiStart():
             return
         print(f'Dimatica >>> 2 *********************************************************')
         print('Dimatica >>> solicitando Stock full')
-        #_CarrilesFormat: str = str(GetStockStar())
-        _CarrilesFormat:str='11:1,12:4,13:5,14:5,15:2,16:3,21:5,22:5,23:5,24:5,25:5,26:5,31:5,32:5,33:5,34:5,35:5,36:5,41:5,42:5,43:5,44:5,45:5,46:5,51:5,52:5,53:5,54:5,55:5,56:5'
+        _CarrilesFormat: str = str(GetStockStar())
+        #_CarrilesFormat:str='11:1,12:4,13:5,14:5,15:2,16:3,21:5,22:5,23:5,24:5,25:5,26:5,31:5,32:5,33:5,34:5,35:5,36:5,41:5,42:5,43:5,44:5,45:5,46:5,51:5,52:5,53:5,54:5,55:5,56:5'
         print(f'Dimatica >>> Carriles:{_CarrilesFormat}')
         print(f'Dimatica >>> 3 *************************************************')
 
