@@ -171,6 +171,8 @@ def ApiPrepare():
             msg = messageJsonOutput(_Result, None)
             return msg
 
+        _Variables.current_state = WorkerStates.LOCAL
+
         _carril:str= request.args.get('Carril')
 
         print(f'Dimatica >>>Carril: {_carril}')
