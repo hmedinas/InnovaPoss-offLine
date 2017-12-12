@@ -276,6 +276,32 @@ def ApiFinish():
     except Exception as e:
         return "Error........ Finish"
 
+@app.route('/api/Navidad',methods=['GET'])
+def Navidad():
+    _Result = MessageJson()
+    _Result.Accion = "DISPACHER"
+    _Result.TimeBloq = 0
+    try:
+        _R = ccm_adapter.transact_message('CCM_Getstatus')
+        if 'OK' not in _R:
+            _Result.Status = 'KO'
+            return 
+
+        _Rpt = ccm_adapter.transact_message('CCM_Navidad')
+        if 'OK' in _Rpt:
+            _Result.Status = 'OK'
+        else:
+            _Result.Status = 'KO'
+        _Result.Phone = ''
+    except Exception as e:
+        _Result.Phone = ''
+        _Result.Status = 'KO'
+        print(e)
+        _Result.Mensaje = ErrorProcess.DESCONOCIDO  # 'ERR-1000: Error no controlado.
+    finally:
+        print("Enviando Mensaje server")
+        msg = messageJsonOutput(_Result, None)
+        return msg
 
 def CCM_Getstatus()-> bool:
     _Result = ccm_adapter.transact_message('CCM_Getstatus')
