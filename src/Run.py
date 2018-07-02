@@ -285,7 +285,7 @@ def Navidad():
         _R = ccm_adapter.transact_message('CCM_Getstatus')
         if 'OK' not in _R:
             _Result.Status = 'KO'
-            return 
+            return
 
         _Rpt = ccm_adapter.transact_message('CCM_Navidad')
         if 'OK' in _Rpt:
@@ -355,6 +355,7 @@ if __name__=='__main__':
     mon_adapter.incoming_msg_handler = monedero_callback
 
     port = int(os.environ.get('PORT', 5000))
+
 
     app.run(host='127.0.0.1', port=port)
     #app.run(debug=False)
